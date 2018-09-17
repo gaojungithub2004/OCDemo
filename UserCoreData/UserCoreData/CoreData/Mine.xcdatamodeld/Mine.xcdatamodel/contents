@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Dog" representedClassName="Dog" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ImageModel" representedClassName="ImageModel" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="Mine" representedClassName="Mine" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="dog" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Dog" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Dog" positionX="-54" positionY="18" width="128" height="60"/>
+        <element name="Mine" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="ImageModel" positionX="-54" positionY="18" width="128" height="60"/>
+    </elements>
+</model>
