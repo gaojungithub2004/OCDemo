@@ -14,3 +14,7 @@
 
 # 3DTouch功能
 ![Image text](https://github.com/gaojungithub2004/OCDemo/blob/master/gif/CzwsBgd8Xl.gif)
+
+# AnimatedTransitionImage
+![AnimatedTransitionImage]()
+
