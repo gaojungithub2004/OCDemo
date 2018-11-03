@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class ImagesModel;
 @interface ImageTableView : UITableView
+
+@property (nonatomic, strong) NSArray *imageArray;
+
+@property (nonatomic, copy) void((^tapBlock)(ImagesModel *));
 
 @end

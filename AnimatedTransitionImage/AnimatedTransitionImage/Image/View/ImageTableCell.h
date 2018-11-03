@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class ImagesModel;
+@protocol ImageTableCellSelectDelegate <NSObject>
+
+- (void)selectImageViewWithModel: (ImagesModel *)model;
+
+@end
+
 @interface ImageTableCell : UITableViewCell
 
+@property (nonatomic, strong)ImagesModel *model;
+@property (nonatomic, strong)NSMutableArray *imageViews;
+
+@property (nonatomic, weak)id<ImageTableCellSelectDelegate> selectDelegate;
+
+//@property (nonatomic, copy) void((^tapBlock)(ImagesModel *));
+@property (nonatomic, strong) UIView *imageContentView;
 @end

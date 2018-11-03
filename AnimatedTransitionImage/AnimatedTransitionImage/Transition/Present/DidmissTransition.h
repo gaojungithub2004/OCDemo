@@ -6,8 +6,8 @@
 //  Copyright © 2018年 ford Gao. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface DidmissTransition : NSObject
+@interface DidmissTransition : NSObject<UIViewControllerAnimatedTransitioning>
 
 @end

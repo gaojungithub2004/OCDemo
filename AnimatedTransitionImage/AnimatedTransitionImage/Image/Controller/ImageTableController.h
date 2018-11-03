@@ -8,6 +8,10 @@
 
 #import "BaseViewController.h"
 
+@class ImagesModel;
 @interface ImageTableController : BaseViewController
 
+
+- (ImagesModel *)getSelctModel;
+- (BOOL)interacting;
 @end

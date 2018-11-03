@@ -10,4 +10,7 @@
 #define marco_h
 
 
+#define Status_Height [[UIApplication sharedApplication] statusBarFrame].size.height
+#define Nav_Height 44
+
 #endif /* marco_h */

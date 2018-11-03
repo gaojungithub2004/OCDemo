@@ -10,4 +10,7 @@
 
 @interface ImageCollectionView : UICollectionView
 
+@property (nonatomic, strong) NSMutableArray *imagesArray;
+@property (nonatomic, copy) void (^tapBlock)(NSUInteger, UIImageView *);
+@property (nonatomic, copy) void (^scrollBlock)(NSUInteger, UIImageView *);
 @end

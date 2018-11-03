@@ -6,8 +6,28 @@
 //  Copyright © 2018年 ford Gao. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 
 @interface ImagesModel : NSObject
 
+@property (nonatomic, strong) NSArray *imageArray;
+
+/**
+ table indexPath.row 选中的cell
+ */
+@property (nonatomic, assign) NSUInteger row;
+@property (nonatomic, strong) UITableViewCell *cell;
+
+/**
+ 选中的imageView, 选中的imageView的下标
+ */
+@property (nonatomic, assign) int selectRow;
+@property (nonatomic, strong) UIImageView *imageView;
+
+
+/**
+ previewImageview 点击将要消失的imageView
+ */
+@property (nonatomic, strong) UIImageView *dismissImageView;
 @end

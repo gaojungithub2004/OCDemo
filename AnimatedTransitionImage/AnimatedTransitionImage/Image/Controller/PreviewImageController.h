@@ -8,6 +8,20 @@
 
 #import "BaseViewController.h"
 
+
+@class PreviewImageController, ImagesModel;
+@protocol PreviewImageControllerDelegate <NSObject>
+
+-(void) modalViewControllerDidClickedDismissButton:(PreviewImageController *)viewController;
+
+@end
+
 @interface PreviewImageController : BaseViewController
+
+@property (nonatomic, strong) ImagesModel *model;
+
+@property (nonatomic, weak) id<PreviewImageControllerDelegate> delegate;
+
+- (void)subViewHidden:(BOOL)isHidden;
 
 @end
