@@ -7,8 +7,13 @@
 //
 
 #import "PreviewImageViewController.h"
+#import "PreviewImageCell.h"
+#import "UIView+category.h"
 
-@interface PreviewImageViewController ()
+#define PreviewImageCellId @"PreviewImageCellId"
+@interface PreviewImageViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, strong) UICollectionView *collectionView;
 
 @end
 
@@ -16,22 +21,58 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.view addSubview: self.collectionView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark 懒加载
+
+- (UICollectionView *)collectionView{
+    if(!_collectionView){
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.itemSize = CGSizeMake(self.view.width, self.view.height);
+        flowLayout.minimumLineSpacing = 0;
+        flowLayout.minimumInteritemSpacing = 0;
+        flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        _collectionView.dataSource = self;
+        _collectionView.delegate = self;
+        _collectionView.pagingEnabled = YES;
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+        [_collectionView registerClass: [PreviewImageCell class] forCellWithReuseIdentifier: PreviewImageCellId];
+    }
+    return _collectionView;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForItem: self.currentIndex inSection: 0];
+//    [self.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+    [self.collectionView setContentOffset: CGPointMake(self.currentIndex * self.view.width, 0)];
 }
-*/
+
+#pragma mark set
+
+- (void)setImagesArray:(NSMutableArray *)imagesArray{
+    _imagesArray = imagesArray;
+    [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
+}
+
+#pragma mark UICollectionViewDataSource
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.imagesArray.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    PreviewImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:PreviewImageCellId forIndexPath:indexPath];
+    UIImage *image = self.imagesArray[indexPath.row];
+    cell.previewImageView.image = image;
+    return cell;
+}
+
 
 @end

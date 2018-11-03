@@ -10,4 +10,8 @@
 
 @interface PreviewImageViewController : UIViewController
 
+@property (nonatomic, assign) NSInteger currentIndex;
+@property (nonatomic, strong) NSMutableArray *imagesArray;
+
+
 @end

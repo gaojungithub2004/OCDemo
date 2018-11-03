@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E22336F4215B117800C10371 /* AnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E22336F3215B117800C10371 /* AnimatedTransition.m */; };
+		E22336F7215B1BEA00C10371 /* PreviewImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22336F6215B1BEA00C10371 /* PreviewImageViewController.m */; };
+		E22336FA215B1C3700C10371 /* PreviewImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E22336F9215B1C3700C10371 /* PreviewImageCell.m */; };
+		E22336FD215B5FAA00C10371 /* 123.png in Resources */ = {isa = PBXBuildFile; fileRef = E22336FC215B5FAA00C10371 /* 123.png */; };
+		E2233824215CC37B00C10371 /* PreviewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2233823215CC37B00C10371 /* PreviewModel.m */; };
 		E2B15E412151D5560088F7F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B15E402151D5560088F7F4 /* AppDelegate.m */; };
 		E2B15E442151D5560088F7F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B15E432151D5560088F7F4 /* ViewController.m */; };
 		E2B15E472151D5560088F7F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2B15E452151D5560088F7F4 /* Main.storyboard */; };
@@ -19,9 +24,21 @@
 		E2C7CB012151F07700164A74 /* UIView+category.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C7CAFF2151F07700164A74 /* UIView+category.m */; };
 		E2C7CB072151F67C00164A74 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C7CB062151F67C00164A74 /* TableCell.m */; };
 		E2DB3952215226D30004558E /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DB3951215226D30004558E /* ResultViewController.m */; };
+		E2DB395721523AC00004558E /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DB395621523AC00004558E /* ImageViewController.m */; };
+		E2DB395921523C3C0004558E /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E2DB395821523C3B0004558E /* timg.jpeg */; };
+		E2DB395C21523DA60004558E /* ImageResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DB395B21523DA60004558E /* ImageResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E22336F2215B117800C10371 /* AnimatedTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedTransition.h; sourceTree = "<group>"; };
+		E22336F3215B117800C10371 /* AnimatedTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedTransition.m; sourceTree = "<group>"; };
+		E22336F5215B1BEA00C10371 /* PreviewImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewImageViewController.h; sourceTree = "<group>"; };
+		E22336F6215B1BEA00C10371 /* PreviewImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewImageViewController.m; sourceTree = "<group>"; };
+		E22336F8215B1C3700C10371 /* PreviewImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewImageCell.h; sourceTree = "<group>"; };
+		E22336F9215B1C3700C10371 /* PreviewImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewImageCell.m; sourceTree = "<group>"; };
+		E22336FC215B5FAA00C10371 /* 123.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 123.png; sourceTree = "<group>"; };
+		E2233822215CC37B00C10371 /* PreviewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreviewModel.h; sourceTree = "<group>"; };
+		E2233823215CC37B00C10371 /* PreviewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreviewModel.m; sourceTree = "<group>"; };
 		E2B15E3C2151D5560088F7F4 /* Touch3Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touch3Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B15E3F2151D5560088F7F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E2B15E402151D5560088F7F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,6 +61,11 @@
 		E2C7CB062151F67C00164A74 /* TableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
 		E2DB3950215226D30004558E /* ResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
 		E2DB3951215226D30004558E /* ResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		E2DB395521523AC00004558E /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		E2DB395621523AC00004558E /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		E2DB395821523C3B0004558E /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
+		E2DB395A21523DA60004558E /* ImageResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageResultViewController.h; sourceTree = "<group>"; };
+		E2DB395B21523DA60004558E /* ImageResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +79,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E22336EF215B114C00C10371 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				E22336F0215B114C00C10371 /* Present */,
+				E22336F1215B114C00C10371 /* Push */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		E22336F0215B114C00C10371 /* Present */ = {
+			isa = PBXGroup;
+			children = (
+				E22336F2215B117800C10371 /* AnimatedTransition.h */,
+				E22336F3215B117800C10371 /* AnimatedTransition.m */,
+			);
+			path = Present;
+			sourceTree = "<group>";
+		};
+		E22336F1215B114C00C10371 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
 		E2B15E332151D5560088F7F4 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +123,7 @@
 		E2B15E3E2151D5560088F7F4 /* Touch3Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E22336EF215B114C00C10371 /* Transition */,
 				E2B15E552151D58D0088F7F4 /* 3DTouch */,
 				E2B15E3F2151D5560088F7F4 /* AppDelegate.h */,
 				E2B15E402151D5560088F7F4 /* AppDelegate.m */,
@@ -86,6 +134,8 @@
 				E2B15E4A2151D55F0088F7F4 /* LaunchScreen.storyboard */,
 				E2B15E4D2151D55F0088F7F4 /* Info.plist */,
 				E2B15E4E2151D55F0088F7F4 /* main.m */,
+				E22336FC215B5FAA00C10371 /* 123.png */,
+				E2DB395821523C3B0004558E /* timg.jpeg */,
 			);
 			path = Touch3Demo;
 			sourceTree = "<group>";
@@ -105,6 +155,16 @@
 				E2C7CAFD2151F07600164A74 /* UIButton+action.m */,
 				E2C7CAFC2151F07600164A74 /* UIView+category.h */,
 				E2C7CAFF2151F07700164A74 /* UIView+category.m */,
+				E2DB395521523AC00004558E /* ImageViewController.h */,
+				E2DB395621523AC00004558E /* ImageViewController.m */,
+				E22336F5215B1BEA00C10371 /* PreviewImageViewController.h */,
+				E22336F6215B1BEA00C10371 /* PreviewImageViewController.m */,
+				E2233822215CC37B00C10371 /* PreviewModel.h */,
+				E2233823215CC37B00C10371 /* PreviewModel.m */,
+				E22336F8215B1C3700C10371 /* PreviewImageCell.h */,
+				E22336F9215B1C3700C10371 /* PreviewImageCell.m */,
+				E2DB395A21523DA60004558E /* ImageResultViewController.h */,
+				E2DB395B21523DA60004558E /* ImageResultViewController.m */,
 			);
 			path = 3DTouch;
 			sourceTree = "<group>";
@@ -166,8 +226,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22336FD215B5FAA00C10371 /* 123.png in Resources */,
 				E2B15E4C2151D55F0088F7F4 /* LaunchScreen.storyboard in Resources */,
 				E2B15E492151D55E0088F7F4 /* Assets.xcassets in Resources */,
+				E2DB395921523C3C0004558E /* timg.jpeg in Resources */,
 				E2B15E472151D5560088F7F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,13 +241,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2DB395721523AC00004558E /* ImageViewController.m in Sources */,
 				E2B15E442151D5560088F7F4 /* ViewController.m in Sources */,
+				E22336F7215B1BEA00C10371 /* PreviewImageViewController.m in Sources */,
 				E2C7CB002151F07700164A74 /* UIButton+action.m in Sources */,
+				E22336FA215B1C3700C10371 /* PreviewImageCell.m in Sources */,
 				E2B15E582151D5AA0088F7F4 /* AppDelegate+_dtouch.m in Sources */,
 				E2B15E4F2151D55F0088F7F4 /* main.m in Sources */,
 				E2C7CAFB2151F02000164A74 /* TableViewController.m in Sources */,
+				E2233824215CC37B00C10371 /* PreviewModel.m in Sources */,
 				E2B15E412151D5560088F7F4 /* AppDelegate.m in Sources */,
+				E2DB395C21523DA60004558E /* ImageResultViewController.m in Sources */,
 				E2C7CB072151F67C00164A74 /* TableCell.m in Sources */,
+				E22336F4215B117800C10371 /* AnimatedTransition.m in Sources */,
 				E2C7CB012151F07700164A74 /* UIView+category.m in Sources */,
 				E2DB3952215226D30004558E /* ResultViewController.m in Sources */,
 			);

@@ -7,8 +7,13 @@
 //
 
 #import "ImageResultViewController.h"
+#import "UIView+category.h"
+#import "AnimatedTransition.h"
 
 @interface ImageResultViewController ()
+
+
+@property (nonatomic, strong) AnimatedTransition *transition;
 
 @end
 
@@ -17,21 +22,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor blackColor];
+    [self.view addSubview: self.imageView];
+    self.imageView.image = self.image;
+    self.imageView.userInteractionEnabled = YES;
+    __weak __typeof(self)weakSelf = self;
+    [self.imageView tapAction:^{
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    self.transition = [AnimatedTransition new];
+    self.transitioningDelegate = self.transition;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (UIImageView *)imageView{
+    if (!_imageView) {
+        _imageView = [[UIImageView alloc] initWithFrame: self.view.bounds];
+        
+    }
+    return _imageView;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setImage:(UIImage *)image{
+    _image = image;
+    
 }
-*/
+
+- (BOOL)prefersStatusBarHidden{
+    return YES;
+}
 
 @end

@@ -10,4 +10,6 @@
 
 @interface ImageResultViewController : UIViewController
 
+@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) UIImageView *imageView;
 @end

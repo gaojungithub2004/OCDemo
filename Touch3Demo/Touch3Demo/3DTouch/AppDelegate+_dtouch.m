@@ -8,6 +8,7 @@
 
 #import "AppDelegate+_dtouch.h"
 #import "TableViewController.h"
+#import "ImageViewController.h"
 
 @implementation AppDelegate (_dtouch)
 
@@ -20,18 +21,29 @@
     
     UIApplicationShortcutIcon *icon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeAdd];
     
-    UIApplicationShortcutItem *item = [[UIApplicationShortcutItem alloc]initWithType:@"com.yang.share" localizedTitle:@"添加" localizedSubtitle:@"******" icon:icon userInfo:nil];
-    [UIApplication sharedApplication].shortcutItems = @[item];
+    UIApplicationShortcutItem *item = [[UIApplicationShortcutItem alloc]initWithType:@"com.gaojun.share" localizedTitle:@"添加" localizedSubtitle:@"******" icon:icon userInfo:nil];
+    
+    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeSearch];
+    
+    UIApplicationShortcutItem *item2 = [[UIApplicationShortcutItem alloc]initWithType:@"com.gaojun.image" localizedTitle:@"添加" localizedSubtitle:@"******" icon:icon2 userInfo:nil];
+    
+    [UIApplication sharedApplication].shortcutItems = @[item, item2];
 }
 
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
     
-    if ([shortcutItem.type isEqualToString: @"com.yang.share"]) {
+    if ([shortcutItem.type isEqualToString: @"com.gaojun.share"]) {
         
         TableViewController *controller = [TableViewController new];
         controller.title = @"table";
+        controller.navigationController.navigationBar.translucent = NO;
         controller.view.backgroundColor = [UIColor purpleColor];
         [self.window.rootViewController presentViewController: [[UINavigationController alloc] initWithRootViewController:controller] animated: YES completion:nil];
+    }
+    
+    if ([shortcutItem.type isEqualToString: @"com.gaojun.image"]) {
+        ImageViewController *imageC = [ImageViewController new];
+        [self.window.rootViewController presentViewController: imageC animated: YES completion:nil];
     }
 }
 

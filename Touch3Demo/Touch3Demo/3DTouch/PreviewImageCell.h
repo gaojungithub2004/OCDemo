@@ -10,4 +10,6 @@
 
 @interface PreviewImageCell : UICollectionViewCell
 
+@property (nonatomic, strong) UIImageView *previewImageView;
+
 @end
